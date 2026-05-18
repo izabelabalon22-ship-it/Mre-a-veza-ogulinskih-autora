@@ -31,26 +31,51 @@ Istraživanje je provedeno putem digitalne platforme "Mreža Ogulina", koja kori
 
 ### Arhitektura Podataka i Vizualizacije
 
-U nastavku je prikazan Mermaid dijagram koji ilustrira strukturu podataka i međuovisnosti entiteta unutar aplikacije:
+U nastavku je prikazan Mermaid dijagram koji ilustrira raščlanjenu strukturu podataka, relacije između ključnih autora i ulogu legendi u sintezi ogulinskog identiteta:
 
 ```mermaid
 graph TD
-    A((Autor)) -- "Intelektualni utjecaj / Kolaboracija" --> A
-    A -- "Pripadnost tematskom krugu" --> L{Izvorna Legenda}
-    A -- "Interpretacija motiva" --> M[Tematski Motiv]
-    L -- "Oblikovanje identiteta" --> A
+    subgraph "Intelektualni Nositelji (Autori)"
+        IBM(Ivana Brlić Mažuranić)
+        HIS(Historiografi: Laszowski/Magdić)
+        SAK(Sakupljači: Strohal/Magdić)
+        SUV(Suvremeni: Gvozdić/Hameršak)
+    end
     
-    style A fill:#f9f9f9,stroke:#1A1A1A,stroke-width:2px
-    style L fill:#059669,stroke:#1A1A1A,stroke-width:2px,color:#fff
-    style M fill:#fff,stroke:#1A1A1A,stroke-dasharray: 5 5
+    subgraph "Izvorne Legende (Jezgra Identiteta)"
+        L1{Klečke vještice}
+        L2{Đulin ponor}
+        L3{Uspavani div}
+        L4{Frankopanska baština}
+    end
+    
+    L1 & L2 & L3 -- "Inspiracija i mit" --> IBM
+    L4 -- "Arhivska građa i povijest" --> HIS
+    L1 & L2 & L3 -- "Zapisivanje usmene predaje" --> SAK
+    
+    IBM -- "Književna kanonizacija" --> IDB((Identitet: Grad Bajke))
+    HIS -- "Znanstvena legitimizacija" --> IDP((Identitet: Povijesni Grad))
+    
+    SAK -- "Faktografski predložak" --> IBM
+    SUV -- "Moderna interpretacija" --> IDB
+    
+    IDP -- "Povijesni temelj" --> IDB
+    
+    classDef blueNode fill:#e0f2fe,stroke:#0369a1,stroke-width:2px,color:#075985;
+    classDef coreNode fill:#f8fafc,stroke:#0ea5e9,stroke-width:2px,stroke-dasharray: 5 5,color:#0369a1;
+    class IBM,HIS,SAK,SUV,IDB,IDP blueNode;
+    class L1,L2,L3,L4 coreNode;
 ```
 
 ### Rezultati
 
-Vizualizacija mreže otkrila je nekoliko ključnih nalaza:
-- **Centralnost legendi:** Legenda o Klečkim vješticama služi kao najjači poveznik (hub) u mreži, povezujući najširi spektar autora (od beletristike do znanstvenih radova).
-- **Interpretacijski zaokret:** Dok su rani autori poput Emila Laszowskog pristupali legendama iz povijesno-znanstvenog kuta, suvremeni autori poput Sabine Gvozdić koriste legendu kao performativni alat za izgradnju turističkog i obrazovnog identiteta.
-- **Identitetski utjecaj "Uspavanog diva":** Pokazalo se da vizualni identitet grada, dominiran planinom Klek, izravno korelira s književnim motivima Regoča, stvarajući "geološki identitet" koji stanovnici internaliziraju kao dio svoje svakodnevice.
+Vizualizacija mreže i pripadajuća analiza otkrili su nekoliko ključnih nalaza o strukturi ogulinskog intelektualnog identiteta:
+
+- **Centralnost legendi kao kohezivnih čvorišta:** Legenda o Klečkim vješticama služi kao najjači poveznik (hub) u mreži, povezujući najširi spektar autora — od klasične beletristike Ivane Brlić-Mažuranić do suvremenih znanstvenih radova Marijane Hameršak. Ova legenda ne funkcionira samo kao priča, već kao zajednički rječnik koji omogućuje dijalog između autora iz različitih stoljeća.
+- **Diferencijacija autorskih pristupa:** Analiza mreže pokazuje jasnu podjelu na "sakupljače" i "interpretatore". Dok su autori poput Rudolfa Strohala i Nikole Magdića djelovali kao primarni dokumentaristi koji su usmenu predaju fiksirali u pisani format, Ivana Brlić-Mažuranić i Sabina Gvozdić koriste te zapise kao sirovinu za umjetničku i performativnu nadogradnju. Poveznice unutar grafa potvrđuju da bez prvobitnog dokumentacijskog rada kasnija literarna kanonizacija ne bi bila moguća.
+- **Identitetski kontinuitet kroz "Frankopansku baštinu":** Iako su bajkoviti motivi dominantni, mrežni prikaz ističe Frankopansku baštinu kao ključni čvor koji osigurava povijesni legitimitet i osjećaj plemićkog ponosa. Autori poput Emila Laszowskog znanstveno su obradili ovaj segment, čime su osigurali da identitet grada ostane usidren u faktografiji, sprječavajući da on postane isključivo fikcionalan.
+- **Mistična topografija i njezin utjecaj:** Legende o "Uspavanom divu" (Klek) i "Šmitovom jezeru" u mreži su prikazane kao točke susreta prirode i mita. Rezultati pokazuju da vizualni identitet planine Klek izravno korelira s književnim likom Regoča, stvarajući specifičan "geološki identitet". Autori koji pišu o ovim lokalitetima (poput Marijane Hameršak u analizi folklorne topografije) potvrđuju da topografija Ogulina diktira narativni smjer njegovih pisaca.
+- **Ivana Brlić-Mažuranić kao prevoditeljica identiteta:** Analiza veza potvrđuje njezinu ulogu kao središnjeg čvora koji je lokalne, često fragmentirane narodne predaje "preveo" na jezik visoke književnosti. Njezin utjecaj u mreži očituje se kroz brojne odlazne veze prema suvremenim autorima koji se u svojim istraživanjima referiraju na njezinu interpretaciju kao polazišnu točku za razumijevanje Ogulina.
 
 ### Rasprava: Legende kao modifikatori identiteta
 
