@@ -29,42 +29,57 @@ Istraživanje je provedeno putem digitalne platforme "Mreža Ogulina", koja kori
 3. **Analiza veza:** Identificirane su tri vrste veza: intelektualni utjecaj, tematska korespondencija i pripadnost tematskom krugu legendi. Svaka je relacija unutar sustava popraćena kvalitativnim opisom koji detaljno pojašnjava specifičnu prirodu utjecaja ili suradnje između dva subjekta. Kvantitativni parametri grafa, poput gustoće veza oko pojedinih legendi, poslužili su kao empirijski indikatori njihove stvarne moći u oblikovanju kolektivnog pamćenja.
 4. **AI proširenje:** Korišten je Google Gemini API za detekciju implicitnih veza između novih autora i povijesnih tekstova. Ova tehnologija omogućila je otkrivanje suptilnih slojeva identitetskog kontinuiteta koji nisu vidljivi kroz izravno citiranje, već se manifestiraju kroz interpretaciju sličnih simbola. Time je sustav postao sposoban za prepoznavanje specifičnog rječnika i motiva ogulinskog bajkovitog kruga, osiguravajući visoku razinu relevantnosti svake automatizirane sugestije.
 
-### Arhitektura Podataka i Vizualizacije
+### Arhitektura Podataka i Vizualna Mreža Identiteta
 
-U nastavku je prikazan Mermaid dijagram koji ilustrira raščlanjenu strukturu podataka, relacije između ključnih autora i ulogu legendi u sintezi ogulinskog identiteta:
+Aplikacija "Mreža Ogulina" koristi napredni sustav vizualizacije temeljen na relacijskoj bazi utjecaja. Donji dijagram raščlanjuje te veze, koristeći kolorističko kodiranje (plava za autore/metapodatke, zelena za legende) kako bi se prikazala sinergija između povijesnih činjenica i mitološke nadogradnje:
 
 ```mermaid
 graph TD
-    subgraph "Intelektualni Nositelji (Autori)"
-        IBM(Ivana Brlić Mažuranić)
-        HIS(Historiografi: Laszowski/Magdić)
-        SAK(Sakupljači: Strohal/Magdić)
-        SUV(Suvremeni: Gvozdić/Hameršak)
+    %% Definiranje čvorova s emotikonima za vizualni identitet
+    subgraph S1 ["🏛️ Kulturni Nositelji (Autori)"]
+        IBM(Ivana Brlić-Mažuranić):::blueNode
+        HIS(Emil Laszowski):::blueNode
+        STR(Rudolf Strohal):::blueNode
+        SUV(Sabina Gvozdić):::blueNode
     end
-    
-    subgraph "Izvorne Legende (Jezgra Identiteta)"
-        L1{Klečke vještice}
-        L2{Đulin ponor}
-        L3{Uspavani div}
-        L4{Frankopanska baština}
+
+    subgraph S2 ["🎭 Žanrovi i Metapodaci"]
+        G1[Bajke]:::metaNode
+        G2[Historiografija]:::metaNode
+        G3[Folkloristika]:::metaNode
+        G4[Pripovijedanje]:::metaNode
     end
+
+    subgraph S3 ["✨ Izvorne Legende (Jezgra)"]
+        L1{Vještice s Kleka}:::greenNode
+        L2{Đulin Ponor}:::greenNode
+        L3{Uspavani Div}:::greenNode
+    end
+
+    %% Relacije i tokovi utjecaja
+    IBM -- "Kanonizacija" --> G1
+    HIS -- "Arhivska građa" --> G2
+    STR -- "Zapisi govora" --> G3
+    SUV -- "Interpretacija" --> G4
+
+    L1 & L3 -- "Inspiracija" --> IBM
+    L3 -- "Geološki mit" --> HIS
+    L1 & L2 -- "Usmena građa" --> STR
     
-    L1 & L2 & L3 -- "Inspiracija i mit" --> IBM
-    L4 -- "Arhivska građa i povijest" --> HIS
-    L1 & L2 & L3 -- "Zapisivanje usmene predaje" --> SAK
+    %% Intelektualni mostovi
+    IBM == "Utjecaj na suvremenike" ==> SUV
+    STR -- "Faktografski temelj" --> IBM
     
-    IBM -- "Književna kanonizacija" --> IDB((Identitet: Grad Bajke))
-    HIS -- "Znanstvena legitimizacija" --> IDP((Identitet: Povijesni Grad))
+    %% Konačni identitetski izlaz
+    IDB((IDENTITET: GRAD BAJKE)):::idNode
     
-    SAK -- "Faktografski predložak" --> IBM
-    SUV -- "Moderna interpretacija" --> IDB
-    
-    IDP -- "Povijesni temelj" --> IDB
-    
-    classDef blueNode fill:#e0f2fe,stroke:#0369a1,stroke-width:2px,color:#075985;
-    classDef coreNode fill:#f8fafc,stroke:#0ea5e9,stroke-width:2px,stroke-dasharray: 5 5,color:#0369a1;
-    class IBM,HIS,SAK,SUV,IDB,IDP blueNode;
-    class L1,L2,L3,L4 coreNode;
+    S1 & S2 & S3 === IDB
+
+    %% Napredno stiliziranje (Svijetlo plavi i smaragdni tonovi)
+    classDef blueNode fill:#f0f9ff,stroke:#0ea5e9,stroke-width:2px,color:#0369a1;
+    classDef metaNode fill:#ffffff,stroke:#38bdf8,stroke-width:1px,stroke-dasharray: 5 5,color:#0284c7;
+    classDef greenNode fill:#ecfdf5,stroke:#059669,stroke-width:2px,color:#065f46;
+    classDef idNode fill:#0ea5e9,stroke:#0284c7,stroke-width:3px,color:#fff,font-weight:bold;
 ```
 
 ### Rezultati

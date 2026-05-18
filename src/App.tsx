@@ -40,6 +40,8 @@ export default function App() {
 
   // New author form state
   const [newAuthorName, setNewAuthorName] = useState('');
+  const [newAuthorYears, setNewAuthorYears] = useState('');
+  const [newAuthorGenres, setNewAuthorGenres] = useState('');
   const [newAuthorMotives, setNewAuthorMotives] = useState('');
 
   const filteredAuthors = useMemo(() => {
@@ -56,12 +58,15 @@ export default function App() {
     setIsGenerating(true);
     const id = newAuthorName.toLowerCase().replace(/\s+/g, '-');
     const motives = newAuthorMotives.split(',').map(m => m.trim());
+    const genres = newAuthorGenres.split(',').map(g => g.trim());
     
     const newAuthor: Author = {
       id,
       name: newAuthorName,
       bio: 'Novi autor dodan u mrežu.',
-      period: 'Nepoznato',
+      period: newAuthorYears || 'Nepoznato',
+      years: newAuthorYears,
+      genres: genres.filter(g => g !== ''),
       roles: ['Autor'],
       motives: motives,
       works: [],
@@ -74,6 +79,8 @@ export default function App() {
     setIsAddingAuthor(false);
     setIsGenerating(false);
     setNewAuthorName('');
+    setNewAuthorYears('');
+    setNewAuthorGenres('');
     setNewAuthorMotives('');
     setSelectedAuthor(newAuthor);
   };
@@ -203,7 +210,17 @@ export default function App() {
                   </div>
                   
                   <h2 className="text-4xl font-black leading-[0.9] mb-2 relative z-10">{selectedAuthor.name}</h2>
-                  <p className="text-sm font-sans font-bold uppercase tracking-[0.2em] opacity-40 mb-6 relative z-10">{selectedAuthor.period}</p>
+                  <p className="text-sm font-sans font-bold uppercase tracking-[0.2em] opacity-40 mb-2 relative z-10">{selectedAuthor.years || selectedAuthor.period}</p>
+                  
+                  {selectedAuthor.genres && selectedAuthor.genres.length > 0 && (
+                    <div className="mb-6 relative z-10 flex flex-wrap gap-1">
+                      {selectedAuthor.genres.map(genre => (
+                        <span key={genre} className="text-[9px] font-sans font-bold bg-editorial-ink/5 px-2 py-0.5 rounded-sm">
+                          {genre}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                   
                   <div className="flex flex-wrap gap-2 relative z-10">
                     {selectedAuthor.roles.map(role => (
@@ -310,6 +327,28 @@ export default function App() {
                       value={newAuthorName}
                       onChange={e => setNewAuthorName(e.target.value)}
                     />
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-[10px] font-sans font-black uppercase tracking-widest mb-2">Godine / Razdoblje</label>
+                      <input 
+                        type="text" 
+                        placeholder="npr. 1890-1950..."
+                        className="w-full px-4 py-3 bg-white border-2 border-editorial-ink text-xs font-bold focus:outline-none transition-all placeholder:opacity-30"
+                        value={newAuthorYears}
+                        onChange={e => setNewAuthorYears(e.target.value)}
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-[10px] font-sans font-black uppercase tracking-widest mb-2">Žanrovi</label>
+                      <input 
+                        type="text" 
+                        placeholder="npr. Bajka, Roman..."
+                        className="w-full px-4 py-3 bg-white border-2 border-editorial-ink text-xs font-bold focus:outline-none transition-all placeholder:opacity-30"
+                        value={newAuthorGenres}
+                        onChange={e => setNewAuthorGenres(e.target.value)}
+                      />
+                    </div>
                   </div>
                   <div>
                     <label className="block text-[10px] font-sans font-black uppercase tracking-widest mb-2">Klaster Tematskih Motiva</label>

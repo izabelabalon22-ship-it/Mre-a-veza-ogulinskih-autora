@@ -273,13 +273,16 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
           .classed('hidden', false);
         
         if (d.type === 'author') {
+          const author = d.authorData;
           tooltip.html(`
-            <div class="font-black uppercase tracking-widest mb-1 pb-1 border-b border-editorial-bg/20">${d.name}</div>
-            <div class="italic opacity-80">${d.authorData?.bio ? (d.authorData.bio.length > 100 ? d.authorData.bio.substring(0, 100) + '...' : d.authorData.bio) : ''}</div>
+            <div class="font-black uppercase tracking-widest mb-0.5 pb-1 border-b border-editorial-bg/20">${d.name}</div>
+            <div class="text-[8px] opacity-60 mb-2 font-mono">${author?.years || ''} | ${author?.genres?.join(', ') || ''}</div>
+            <div class="italic opacity-80">${author?.bio ? (author.bio.length > 100 ? author.bio.substring(0, 100) + '...' : author.bio) : ''}</div>
           `);
         } else if (d.type === 'legend') {
           tooltip.html(`
-            <div class="font-black uppercase tracking-widest mb-1 pb-1 border-b border-editorial-bg/20">Legenda: ${d.name}</div>
+            <div class="font-black uppercase tracking-widest mb-0.5 pb-1 border-b border-editorial-bg/20">Legenda: ${d.name}</div>
+            <div class="text-[8px] opacity-60 mb-2 font-mono">Razdoblje: ${d.legendData?.era || 'Neodređeno'}</div>
             <div class="italic opacity-80 font-serif leading-tight mb-2">${d.legendData?.description}</div>
             <div class="border-t border-editorial-bg/20 pt-1 mt-1 font-sans text-[8px] uppercase font-black text-editorial-accent">Utjecaj na identitet:</div>
             <div class="text-[9px] opacity-70 italic">${d.legendData?.identityImpact}</div>
@@ -447,7 +450,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
       simulation.stop();
       tooltip.remove();
     };
-  }, [authors, connections, selectedAuthorId, onAuthorSelect]);
+  }, [authors, connections, legends, authorLegendLinks, selectedAuthorId, onAuthorSelect, onSearchThemes]);
 
   return (
     <div ref={containerRef} className="w-full h-full bg-editorial-bg relative overflow-hidden border border-editorial-ink/10 shadow-inner">

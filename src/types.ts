@@ -8,6 +8,8 @@ export interface Author {
   name: string;
   bio: string;
   period: string;
+  years?: string;
+  genres?: string[];
   roles: string[];
   motives: string[];
   works: string[];
@@ -26,6 +28,7 @@ export interface Legend {
   name: string;
   description: string;
   identityImpact: string;
+  era?: string;
 }
 
 export interface NetworkData {

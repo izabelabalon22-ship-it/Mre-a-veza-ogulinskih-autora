@@ -11,6 +11,8 @@ export const AUTHORS: Author[] = [
     name: 'Ivana Brlić-Mažuranić',
     bio: 'Najznačajnija hrvatska spisateljica za djecu, rođena u Ogulinu. Njezina djela transformiraju sirove ogulinske legende (napose one o vješticama s Kleka) u univerzalne bajke, čime je postavila temelje modernog identiteta Ogulina kao Grad bajke.',
     period: '1874 - 1938',
+    years: '1874-1938',
+    genres: ['Bajka', 'Pripovijetka', 'Dječja književnost'],
     roles: ['Književnica'],
     motives: ['Klek', 'Bajka', 'Mitologija', 'Zavičajni identitet'],
     works: ['Priče iz davnine', 'Čudnovate zgode šegrta Hlapića'],
@@ -21,6 +23,8 @@ export const AUTHORS: Author[] = [
     name: 'Emil Laszowski',
     bio: 'Hrvatski povjesničar i arhivist koji je kroz znanstveni rad legitimirao lokalne predaje o Frankopanima, pretvarajući arhivsku građu u čvrst oslonac za ogulinski povijesni identitet.',
     period: '1868 - 1949',
+    years: '1868-1949',
+    genres: ['Historiografija', 'Povijest'],
     roles: ['Povjesničar', 'Arhivist'],
     motives: ['Povijest', 'Frankopani', 'Gradina', 'Arhivi', 'Znanstvena verifikacija'],
     works: ['Povijest grada Ogulina', 'Gorski kotar i Vinodol'],
@@ -30,6 +34,8 @@ export const AUTHORS: Author[] = [
     name: 'Đuro Deželić',
     bio: 'Književnik i javni djelatnik koji je Ogulinu davao društveni i politički značaj, promovirajući krasote zavičaja kao integralni dio hrvatskog narodnog preporoda i identiteta.',
     period: '1838 - 1907',
+    years: '1838-1907',
+    genres: ['Početnička književnost', 'Politika'],
     roles: ['Književnik', 'Političar'],
     motives: ['Narodni identitet', 'Kultura', 'Politika', 'Domoljublje'],
     works: ['Ogulin i okolica'],
@@ -39,6 +45,8 @@ export const AUTHORS: Author[] = [
     name: 'Milan Moguš',
     bio: 'Akademik i jezikoslovac koji je kroz proučavanje dijalekata sačuvao "glas" ogulinskog identiteta, dokazujući neraskidivu vezu između govora, prostora i zajednice.',
     period: '1936 - 2017',
+    years: '1936-2017',
+    genres: ['Lingvistika', 'Dijalektologija'],
     roles: ['Jezikoslovac', 'Akademik'],
     motives: ['Jezik', 'Dijalekt', 'Povijest jezika', 'Jezični identitet'],
     works: ['Kratka povijest hrvatskoga književnoga jezika'],
@@ -48,6 +56,8 @@ export const AUTHORS: Author[] = [
     name: 'Rudolf Strohal',
     bio: 'Jezikoslovac koji je sustavno prikupljao usmenu građu, pretvarajući narodni govor i običaje Ogulina u zapisanu kulturnu baštinu koja definira lokalni karakter.',
     period: '1856 - 1936',
+    years: '1856-1936',
+    genres: ['Etnologija', 'Folkloristika'],
     roles: ['Jezikoslovac', 'Povjesničar'],
     motives: ['Govor', 'Dijalekt', 'Običaji', 'Etnološka baština'],
     works: ['Hrvatska narodna čitanka'],
@@ -57,6 +67,8 @@ export const AUTHORS: Author[] = [
     name: 'Nikola Magdić',
     bio: 'Pedagog koji je kroz dokumentaciju narodnog života osigurao da ogulinske legende ne ostanu samo usmena predaja, već da postanu obrazovni temelj za buduće generacije.',
     period: 'Moderno doba',
+    years: '1863-1933',
+    genres: ['Pedagogija', 'Zapisi'],
     roles: ['Pedagog', 'Pisac'],
     motives: ['Običaji', 'Školstvo', 'Narodna predaja', 'Pedagogija baštine'],
     works: ['Ogulinske narodne pripovijetke'],
@@ -66,6 +78,8 @@ export const AUTHORS: Author[] = [
     name: 'Sabina Gvozdić',
     bio: 'Suvremena čuvarica ogulinskog identiteta koja performativnim pripovijedanjem oživljava mitove o Kleku, vraćajući legendama njihovu prvotnu, živu snagu unutar zajednice.',
     period: 'Suvremeno doba',
+    years: '1982 - danas',
+    genres: ['Pripovijedanje', 'Interpretacija baštine', 'Folkloristika'],
     roles: ['Pripovjedačica', 'Interpretatorica baštine'],
     motives: ['Pripovijedanje', 'Bajke', 'Usmena predaja', 'Živa baština'],
     works: ['Programi pripovijedanja u Ogulinu'],
@@ -75,6 +89,8 @@ export const AUTHORS: Author[] = [
     name: 'Marijana Hameršak',
     bio: 'Znanstvenica koja analitički dekonstruira nastanak i recepciju ogulinskih bajki, mapirajući kako se mitološki motivi transformiraju u gradivne elemente modernog brandinga i identiteta.',
     period: 'Suvremeno doba',
+    years: '1975 - danas',
+    genres: ['Znanstvena studija', 'Etnologija', 'Povijest djetinjstva', 'Folkloristika'],
     roles: ['Etnologinja', 'Znanstvenica'],
     motives: ['Dječja književnost', 'Folkloristika', 'Stvaranje identiteta'],
     works: ['Uvod u dječju književnost', 'Pričalice'],
@@ -149,31 +165,36 @@ export const LEGENDS: Legend[] = [
     id: 'legend-klecke-vjestice',
     name: 'Klečke vještice',
     description: 'Najpoznatija ogulinska legenda o vješticama koje se za olujnih noći skupljaju na vrhu Kleka.',
-    identityImpact: 'Oblikovala Ogulin kao mistično središte i inspirirala naziv "Grad bajke".'
+    identityImpact: 'Oblikovala Ogulin kao mistično središte i inspirirala naziv "Grad bajke".',
+    era: 'Prastaro doba / Srednji vijek'
   },
   {
     id: 'legend-djulin-ponor',
     name: 'Đulin ponor',
     description: 'Legenda o nesretnoj ljubavi Đule koja se bacila u ponor rijeke Dobre zbog neuzvraćene ili zabranjene ljubavi.',
-    identityImpact: 'Simbol romantičarskog i tragičnog segmenta lokalnog identiteta, integriran u samu geografiju grada.'
+    identityImpact: 'Simbol romantičarskog i tragičnog segmenta lokalnog identiteta, integriran u samu geografiju grada.',
+    era: '16. stoljeće'
   },
   {
     id: 'legend-frankopani',
     name: 'Frankopanska baština',
     description: 'Povijesne predaje o osnutku Starog grada i plemićkoj lozi Frankopana.',
-    identityImpact: 'Osigurava povijesni legitimitet i ratnički, plemićki ponos ogulinskog kraja.'
+    identityImpact: 'Osigurava povijesni legitimitet i ratnički, plemićki ponos ogulinskog kraja.',
+    era: '15. - 16. stoljeće'
   },
   {
     id: 'legend-uspavani-div',
     name: 'Uspavani div (Klek)',
     description: 'Legenda koja kaže da je planina Klek zapravo okamenjeni div koji čeka trenutak buđenja.',
-    identityImpact: 'Glavni vizualni simbol grada koji spaja prirodu s mitologijom u kolektivnoj svijesti.'
+    identityImpact: 'Glavni vizualni simbol grada koji spaja prirodu s mitologijom u kolektivnoj svijesti.',
+    era: 'Mitološka praprošlost'
   },
   {
     id: 'legend-smitovo-jezero',
     name: 'Šmitovo jezero',
     description: 'Narodna predaja o zmaju koji je živio u jezeru i vilama koje su se tamo okupljale.',
-    identityImpact: 'Čuva mističnu auru ogulinskog krajolika kao mjesta gdje su granice svjetova propusne.'
+    identityImpact: 'Čuva mističnu auru ogulinskog krajolika kao mjesta gdje su granice svjetova propusne.',
+    era: 'Narodna predaja / Neodređeno'
   }
 ];
 
