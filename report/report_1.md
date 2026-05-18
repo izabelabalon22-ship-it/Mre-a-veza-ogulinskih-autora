@@ -1,8 +1,8 @@
 # Mreža Intelektualnog Identiteta: Analiza Povezanosti Autora i Legendi Ogulinskog Kraja
 
-**Autor:** [Ime Autora]  
-**Institucija:** [Naziv Institucije]  
-**Kolegij:** [Naziv Kolegija]  
+**Autor:** [Izabela Balon]  
+**Institucija:** [Filozofski fakultet u Rijeci]  
+**Kolegij:** [Istraživanje društvenih mreža]  
 **Datum:** 18. svibnja 2026.
 
 ---
