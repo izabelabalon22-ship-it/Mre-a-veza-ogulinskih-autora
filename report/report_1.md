@@ -15,7 +15,11 @@ Ovaj rad istražuje razvoj i strukturu intelektualnog identiteta grada Ogulina k
 
 ### Uvod
 
-Identitet grada nije samo zbir njegovih ulica i građevina, već složeni mrežni sustav narativa koji se prenose generacijama. Ogulin, smješten na razmeđi Gorskog kotara i Like, predstavlja jedinstven studij slučaja u kojem se mitologija i povijest prožimaju u neraskidivo tkivo. Primarni cilj ovog rada je istražiti povezanost i razlike između autora koji svojim djelovanjem definiraju ogulinski identitet. Poseban fokus stavljen je na istraživanje hipoteze da su lokalne legende djelovale kao katalizatori promjene identiteta grada, transformirajući ga iz vojnog uporišta (Frankopanska baština) u mistično središte bajkovitosti.
+Identitet grada nije samo zbir njegovih ulica, geografskih koordinata i građevina; on je složeni, dinamični mrežni sustav narativa koji se prenose generacijama, oblikujući način na koji stanovnici doživljavaju svoj prostor i kako ih vanjski svijet percipira. Ogulin, smješten u srcu Gorskog kotara na razmeđi s Likom, predstavlja paradigmatski primjer zavičajnog identiteta koji je gotovo u potpunosti izgrađen na temeljima narodne predaje i mitologije. Povijest ogulinskih legendi — od mističnih skupova vještica na vrhu Kleka, preko tragične sudbine Đule u bezdanu rijeke Dobre, pa sve do vizure uspavanog diva koja dominira horizontom — nije ostala zarobljena u usmenoj predaji. Naprotiv, te su priče aktivno oblikovale urbanistički, turistički i, najvažnije, intelektualni pejzaž grada, pretvarajući ga iz povijesnog vojnog utvrđenja Frankopana u suvremeni "Grad bajke".
+
+Središnja figura ove transformacije nesumnjivo je Ivana Brlić-Mažuranić. Njezin boravak u Ogulinu i duboko emocionalno proživljavanje njegove prirode i predaja poslužili su kao ishodište za "Priče iz davnine", djelo koje je lokalni folklor uzdiglo na razinu univerzalne umjetničke vrijednosti. Ivana nije samo zapisivala legende; ona ih je prožela vlastitim etičkim i estetskim sustavom, dajući im novi dignitet koji je trajno obilježio kolektivnu svijest Ogulina. Njezin utjecaj na identitet grada je dvostruk: s jedne strane, ona je stvorila brend koji grad danas živi kroz festivale i muzeje, a s druge strane, postavila je intelektualni standard koji je potaknuo generacije autora na slično istraživačko i stvaralačko djelovanje.
+
+Njezin rad postao je svojevrsno "gravitacijsko polje" za druge autore. Historiografi poput Emila Lászowskog osjetili su potrebu znanstveno utemeljiti ono što je Ivana umjetnički naslutila, dok su sakupljači narodnog blaga poput Rudolfa Strohala i Nikole Magdića u njezinom uspjehu pronašli motivaciju za sustavno bilježenje varijanti lokalnih mitova prije nego što iščeznu. Čak i suvremena istraživanja Marijane Hameršak ili performativni rad Sabine Gvozdić duguju svoj smjer onoj početnoj iskri koju je zapalila Brlić-Mažuranić. Primarni cilj ovog rada je, stoga, dekonstruirati tu mrežu utjecaja i istražiti kako su se različite interpretacije legendi ispreplele u ono što danas nazivamo ogulinskom zavičajnošću, istražujući povezanost i razlike u pristupima autora koji su od mitova gradili stvarnost.
 
 ### Metoda
 
@@ -49,4 +53,5 @@ Mreža ogulinskih autora pokazuje da je identitet grada "živi organizam" koji s
     *   Hameršak, M. (2011). *Pričalice: O povijesti djetinjstva i bajke*. Algoritam.
     *   Laszowski, E. (1923). *Grad Ogulin i njegova povijest*.
     *   Strohal, R. (1901). *Narodne pripovijetke iz grada Ogulina i okolice*.
+    *   Magdić, N. (1893). *Topografija i poviest grada Ogulina*.
     *   Mreža Ogulina: Interaktivni Arhiv (Digitalni artefakt, 2026).
