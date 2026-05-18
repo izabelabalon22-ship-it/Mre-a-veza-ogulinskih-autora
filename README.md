@@ -1,37 +1,11 @@
 # Mreža Ogulinskih Autora: Arhiv Intelektualnog Identiteta
 
-## Interaktivna Intelektualna Mreža
-Ovaj projekt koristi **D3.js** za vizualizaciju dinamičkih procesa oblikovanja zavičajnog identiteta. Ispod je strukturni prikaz mrežnih relacija (detaljna interaktivna verzija dostupna je u samoj aplikaciji):
-
-```mermaid
-graph TD
-    subgraph "Izvorne Legende (Zeleni Čvorovi)"
-        L1{Vještice na Kleku}:::legend
-        L2{Đulin Ponor}:::legend
-        L3{Uspavani Div - Klek}:::legend
-        L4{Frankopanska Baština}:::legend
-    end
-    
-    subgraph "Autori i Nositelji (Krugovi)"
-        IBM((Ivana Brlić-Mažuranić)):::author
-        SAK((Sakupljači: Strohal/Magdić)):::author
-        HIS((Historiografi: Laszowski)):::author
-        SUV((Suvremeni: Gvozdić/Hameršak)):::author
-    end
-    
-    L1 & L3 -.-> IBM
-    SAK --- L1 & L2
-    HIS --- L4
-    IBM == "Utjecaj/Inspiracija" ==> SUV
-    
-    classDef legend fill:#059669,stroke:#1A1A1A,stroke-width:2px,color:#fff;
-    classDef author fill:#e0f2fe,stroke:#0369a1,stroke-width:2px,color:#075985;
-```
+![Mreža Ogulina - Animirani Intelektualni Arhiv](./src/assets/images/ogulin_network_hero_1779108343027.png)
 
 ## Pregled Projekta
 **Mreža Ogulinskih Autora** je interaktivna platforma za vizualizaciju i analizu intelektualnog naslijeđa grada Ogulina. Projekt istražuje duboke veze između autora, tematskih motiva i lokalnih legendi koje stoljećima oblikuju identitet ovog "Grada bajke".
 
-Kroz naprednu mrežnu vizualizaciju (D3.js), korisnici mogu istražiti kako su se ideje, legende o Klečkim vješticama, Đulinom ponoru i Frankopanima ispreplitale u djelima pisaca poput Ivane Brlić-Mažuranić, povjesničara poput Emila Laszowskog i suvremenih čuvara baštine.
+Središnji dio aplikacije je **animirana i interaktivna mrežna vizualizacija (D3.js)** koja omogućuje korisnicima da doslovno "povlače" niti povijesti, istražujući kako su se ideje, legende o Klečkim vješticama, Đulinom ponoru i Frankopanima ispreplitale u djelima pisaca poput Ivane Brlić-Mažuranić.
 
 ## Ključne Značajke
 - **Interaktivni Graf Utjecaja**: Vizualni prikaz veza između autora, motiva i legendi.
