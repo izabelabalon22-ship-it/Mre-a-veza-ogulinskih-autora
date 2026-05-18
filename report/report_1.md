@@ -24,10 +24,26 @@ Njezin rad postao je svojevrsno "gravitacijsko polje" za druge autore. Historiog
 ### Metoda
 
 Istraživanje je provedeno putem digitalne platforme "Mreža Ogulina", koja koristi D3.js algoritam za simulaciju sila za vizualizaciju relacija.
-1. **Prikupljanje podataka:** Obrađeni su profili ključnih autora (od Ivane Brlić-Mažuranić do suvremenih istraživača poput Marijane Hameršak).
-2. **Kategorizacija čvorova:** Entiteti su podijeljeni na autore (intelektualne nositelje), motive (tematske okosnice) i izvorne legende (identitetske izvore).
-3. **Analiza veza:** Identificirane su tri vrste veza: intelektualni utjecaj, tematska korespondencija i pripadnost tematskom krugu legendi.
-4. **AI proširenje:** Korišten je Google Gemini API za detekciju implicitnih veza između novih autora i povijesnih tekstova.
+1. **Prikupljanje podataka:** Obrađeni su profili ključnih autora (od Ivane Brlić-Mažuranić do suvremenih istraživača poput Marijane Hameršak). Podaci su crpljeni iz relevantnih književnih arhiva, biografskih leksikona te digitalnih repozitorija zavičajne povijesti kako bi se osigurala faktografska točnost. Proces je također uključivao trijangulaciju podataka iz primarnih literarnih izvora s kritičkim osvrtima i historiografskim studijama radi objektivnosti.
+2. **Kategorizacija čvorova:** Entiteti su podijeljeni na autore (intelektualne nositelje), motive (tematske okosnice) i izvorne legende (identitetske izvore). Svaka kategorija čvorova vizualno je diferencirana upotrebom specifičnih geometrijskih oblika, poput krugova za autore i dijamanata za legende, radi intuitivnijeg snalaženja u mreži. Ova taksonomija omogućuje dekonstrukciju kompleksnog identiteta grada na mjerljive elemente koji se mogu pratiti i uspoređivati kroz različita vremenska razdoblja.
+3. **Analiza veza:** Identificirane su tri vrste veza: intelektualni utjecaj, tematska korespondencija i pripadnost tematskom krugu legendi. Svaka je relacija unutar sustava popraćena kvalitativnim opisom koji detaljno pojašnjava specifičnu prirodu utjecaja ili suradnje između dva subjekta. Kvantitativni parametri grafa, poput gustoće veza oko pojedinih legendi, poslužili su kao empirijski indikatori njihove stvarne moći u oblikovanju kolektivnog pamćenja.
+4. **AI proširenje:** Korišten je Google Gemini API za detekciju implicitnih veza između novih autora i povijesnih tekstova. Ova tehnologija omogućila je otkrivanje suptilnih slojeva identitetskog kontinuiteta koji nisu vidljivi kroz izravno citiranje, već se manifestiraju kroz interpretaciju sličnih simbola. Time je sustav postao sposoban za prepoznavanje specifičnog rječnika i motiva ogulinskog bajkovitog kruga, osiguravajući visoku razinu relevantnosti svake automatizirane sugestije.
+
+### Arhitektura Podataka i Vizualizacije
+
+U nastavku je prikazan Mermaid dijagram koji ilustrira strukturu podataka i međuovisnosti entiteta unutar aplikacije:
+
+```mermaid
+graph TD
+    A((Autor)) -- "Intelektualni utjecaj / Kolaboracija" --> A
+    A -- "Pripadnost tematskom krugu" --> L{Izvorna Legenda}
+    A -- "Interpretacija motiva" --> M[Tematski Motiv]
+    L -- "Oblikovanje identiteta" --> A
+    
+    style A fill:#f9f9f9,stroke:#1A1A1A,stroke-width:2px
+    style L fill:#059669,stroke:#1A1A1A,stroke-width:2px,color:#fff
+    style M fill:#fff,stroke:#1A1A1A,stroke-dasharray: 5 5
+```
 
 ### Rezultati
 
