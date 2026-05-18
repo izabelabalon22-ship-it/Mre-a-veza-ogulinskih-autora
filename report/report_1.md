@@ -7,7 +7,8 @@
 
 ---
 
-![Vizualni prikaz mrežnog identiteta Ogulina](../src/assets/images/ogulin_network_hero_1779108343027.png)
+![Akvarel identiteta: Šmitovo jezero i skrivene legende](../src/assets/images/smitovo_jezero_magical_1779114319040.png)
+*Slika 1: Vizualizacija Šmitovog jezera — mitsko čvorište gdje se priroda stapa s legendom o zmaju i vilama, simbolizirajući fluidnost zavičajnog identiteta.*
 
 ### Sažetak
 
