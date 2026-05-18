@@ -1,6 +1,6 @@
 {
-  "name": "Mreža Ogulinskih Autora",
-  "description": "Analiza mreža autora koji pišu o Ogulinu, mapiranje utjecaja i zajedničkih tematskih motiva.",
+  "name": "Mreža Ogulina: Arhiv Identiteta",
+  "description": "Interaktivna mrežna vizualizacija intelektualnog zavičajnog identiteta Ogulina, povezujući autore, motive i legende koje oblikuju Grad bajke.",
   "requestFramePermissions": [],
   "majorCapabilities": []
 }
