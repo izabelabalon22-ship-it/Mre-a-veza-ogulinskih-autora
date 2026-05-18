@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Crimson Pro", Georgia, serif;
+  
+  --color-editorial-bg: #F9F7F2;
+  --color-editorial-ink: #1A1A1A;
+  --color-editorial-accent: #E84E36;
+}
+
+body {
+  @apply antialiased bg-editorial-bg text-editorial-ink font-serif;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+/* Custom scrollbar for editorial feel */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-editorial-ink);
+  opacity: 0.2;
+}
