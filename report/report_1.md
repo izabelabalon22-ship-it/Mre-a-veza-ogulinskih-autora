@@ -34,42 +34,46 @@ Istraživanje je provedeno putem digitalne platforme "Mreža Ogulina", koja kori
 
 ### Arhitektura Podataka i Vizualna Mreža Identiteta
 
-Aplikacija "Mreža Ogulina" koristi napredni sustav vizualizacije temeljen na relacijskoj bazi utjecaja. Donji dijagram raščlanjuje te veze, koristeći kolorističko kodiranje (nježno plava za autore, svijetlo roza za legende) kako bi se osigurala maksimalna preglednost i estetski sklad bez preklapanja elemenata:
+Aplikacija "Mreža Ogulina" koristi napredni sustav vizualizacije temeljen na relacijskoj bazi utjecaja. Donji dijagram raščlanjuje te veze, koristeći kolorističko kodiranje (nježno plava za autore, svijetlo roza za legende) na svijetlo ljubičastoj pozadini, osiguravajući maksimalnu preglednost i estetski sklad:
 
 ```mermaid
-graph LR
-    %% Definiranje čvorova sa simbolima
-    subgraph S1 ["🏛️ Kulturni Nositelji (Autori)"]
-        IBM(Ivana Brlić-Mažuranić):::blueNode
-        HIS(Emil Laszowski):::blueNode
-        STR(Rudolf Strohal):::blueNode
-        SUV(Sabina Gvozdić):::blueNode
+graph TD
+    subgraph Mreža ["📊 Mreža Identiteta Ogulina"]
+        direction LR
+        
+        subgraph S1 ["🏛️ Autori"]
+            IBM(Ivana Brlić-Mažuranić):::blueNode
+            HIS(Emil Laszowski):::blueNode
+            STR(Rudolf Strohal):::blueNode
+            SUV(Sabina Gvozdić):::blueNode
+        end
+
+        subgraph S2 ["✨ Legende"]
+            L1{Vještice s Kleka}:::pinkNode
+            L2{Đulin Ponor}:::pinkNode
+            L3{Uspavani Div}:::pinkNode
+        end
+
+        %% Relacije
+        L1 & L3 -- "Inspiracija" --> IBM
+        L3 -- "Arhivska građa" --> HIS
+        L1 & L2 -- "Zapisi govora" --> STR
+        
+        STR -- "Temelj" --> IBM
+        IBM == "Utjecaj" ==> SUV
+        
+        %% Rezultat
+        IDB((IDENTITET: GRAD BAJKE)):::idNode
+        
+        S1 --> IDB
+        S2 -.-> IDB
     end
 
-    subgraph S2 ["✨ Izvorne Legende (Jezgra)"]
-        L1{Vještice s Kleka}:::pinkNode
-        L2{Đulin Ponor}:::pinkNode
-        L3{Uspavani Div}:::pinkNode
-    end
-
-    %% Relacije i tokovi utjecaja (optimizirano za LR prikaz)
-    L1 & L3 -- "Inspiracija" --> IBM
-    L3 -- "Arhivska građa" --> HIS
-    L1 & L2 -- "Zapisi govora" --> STR
-    
-    STR -- "Faktografski temelj" --> IBM
-    IBM == "Intelektualni utjecaj" ==> SUV
-    
-    %% Konačni identitetski izlaz
-    IDB((IDENTITET: GRAD BAJKE)):::idNode
-    
-    IBM & HIS & STR & SUV --> IDB
-    L1 & L2 & L3 -.-> IDB
-
-    %% Stilovi (Svijetlo plava i Svijetlo roza)
-    classDef blueNode fill:#eff6ff,stroke:#3b82f6,stroke-width:2px,color:#1e40af;
-    classDef pinkNode fill:#fff1f2,stroke:#f43f5e,stroke-width:2px,color:#9f1239;
-    classDef idNode fill:#f8fafc,stroke:#64748b,stroke-width:3px,color:#0f172a,font-weight:bold;
+    %% Stilovi
+    style Mreža fill:#faf5ff,stroke:#d8b4fe,stroke-width:2px,color:#581c87
+    classDef blueNode fill:#e0f2fe,stroke:#38bdf8,stroke-width:2px,color:#075985
+    classDef pinkNode fill:#fdf2f8,stroke:#f472b6,stroke-width:2px,color:#9d174d
+    classDef idNode fill:#ffffff,stroke:#8b5cf6,stroke-width:3px,color:#4c1d95,font-weight:bold
 ```
 
 ### Rezultati
