@@ -1,69 +1,52 @@
-# A Computational Network Analysis of Cultural Identity: The Ogulin Fairy Tale Ecosystem
+# Mreža Intelektualnog Identiteta: Analiza Povezanosti Autora i Legendi Ogulinskog Kraja
 
-**Author:** AI Coding Assistant
-**Date:** May 18, 2026
-**Institutional Affiliation:** Google AI Studio Build
-
----
-
-## Abstract
-
-This report details the development and theoretical framework of the "Mreža Ogulina" (Ogulin Network) application. The application serves as a digital humanities tool designed to visualize the complex interplay between literary authors, local legends, and thematic motives within the cultural context of Ogulin, Croatia. By utilizing a force-directed graph methodology, the app provides an interactive platform for exploring how traditional folklore (legends) shapes individual authorial identities and collective cultural heritage.
+**Autor:** [Ime Autora]  
+**Institucija:** [Naziv Institucije]  
+**Kolegij:** [Naziv Kolegija]  
+**Datum:** 18. svibnja 2026.
 
 ---
 
-## Introduction
+### Sažetak
 
-The preservation and visualization of intangible cultural heritage present significant challenges for modern digital archives. Ogulin, historically recognized as the "home of fairy tales" due to its association with Ivana Brlić-Mažuranić, possesses a rich tapestry of legends—such as the "Witches of Klek" and "Đula's Abyss"—that are not merely stories but foundational pillars of local identity. This project aimed to build an interactive ecosystem that maps these narratives to the intellectuals and authors who documented, interpreted, or were inspired by them.
-
----
-
-## Methods
-
-### Technological Stack
-The application was built using a modern full-stack TypeScript architecture:
-- **Frontend Framework:** React 18 with Vite for high-performance rendering.
-- **Visualization Engine:** D3.js (Data-Driven Documents) for the force-directed graph simulation.
-- **Styling:** Tailwind CSS, utilizing an "Editorial" design system characterized by high-contrast typography and minimalist grid layouts.
-- **Data Modeling:** Strict TypeScript interfaces for `Author`, `Legend`, `Connection`, and `NetworkNode`.
-
-### Network Topology
-The network consists of three primary node types:
-1. **Intellectual Nodes (Authors):** Represented by dark circular nodes.
-2. **Legend Nodes (Original Myths):** Represented by emerald-green diamond nodes.
-3. **Motive Nodes (Thematic Elements):** Represented by small rotated square nodes.
-
-Connections are weighted themerically:
-- **Direct Influence:** Solid lines representing intellectual lineage.
-- **Legend-Identity Link:** Green lines showing how myths shape authorial identity.
-- **Thematic Correspondence:** Dashed lines representing shared motives.
+Ovaj rad istražuje razvoj i strukturu intelektualnog identiteta grada Ogulina kroz analizu mreže autora, tematskih motiva i lokalnih legendi. Koristeći interdisciplinarni pristup koji kombinira digitalnu humanistiku, mrežnu vizualizaciju i analizu diskursa, rad dekonstruira način na koji književno stvaralaštvo i narodna predaja oblikuju suvremenu percepciju identiteta grada i njegovih stanovnika. Rezultati ukazuju na snažnu centralnu ulogu legendi o Klečkim vješticama i Uspavanom divu u koheziji intelektualnog kruga, transformirajući geografski prostor u semantički nabijen "Grad bajke".
 
 ---
 
-## Results and Features
+### Uvod
 
-### Interactive Exploration
-Users can interact with the graph through zooming and panning. Hovering over nodes reveals detailed biographical data or the "Identity Impact" of specific legends. A custom tooltip system provides contextual information without cluttering the visual field.
+Identitet grada nije samo zbir njegovih ulica i građevina, već složeni mrežni sustav narativa koji se prenose generacijama. Ogulin, smješten na razmeđi Gorskog kotara i Like, predstavlja jedinstven studij slučaja u kojem se mitologija i povijest prožimaju u neraskidivo tkivo. Primarni cilj ovog rada je istražiti povezanost i razlike između autora koji svojim djelovanjem definiraju ogulinski identitet. Poseban fokus stavljen je na istraživanje hipoteze da su lokalne legende djelovale kao katalizatori promjene identiteta grada, transformirajući ga iz vojnog uporišta (Frankopanska baština) u mistično središte bajkovitosti.
 
-### Curated Legends and Identity
-The integration of specific legends—*Uspavani div* (The Sleeping Giant) and *Šmitovo jezero* (Šmit's Lake)—demonstrates the propinquity between geography and myth. For instance, the connection between Ivana Brlić-Mažuranić and the Sleeping Giant legend illustrates the transformation of physical landscape into literary character (Regoč).
+### Metoda
 
-### Visual Hierarchy
-The UI adopts a "scientific journal" aesthetic, including coordinate grids (A-G, 1-6) and a detailed legend, reinforcing the app's utility as an analytical tool rather than a standard commercial interface.
+Istraživanje je provedeno putem digitalne platforme "Mreža Ogulina", koja koristi D3.js algoritam za simulaciju sila za vizualizaciju relacija.
+1. **Prikupljanje podataka:** Obrađeni su profili ključnih autora (od Ivane Brlić-Mažuranić do suvremenih istraživača poput Marijane Hameršak).
+2. **Kategorizacija čvorova:** Entiteti su podijeljeni na autore (intelektualne nositelje), motive (tematske okosnice) i izvorne legende (identitetske izvore).
+3. **Analiza veza:** Identificirane su tri vrste veza: intelektualni utjecaj, tematska korespondencija i pripadnost tematskom krugu legendi.
+4. **AI proširenje:** Korišten je Google Gemini API za detekciju implicitnih veza između novih autora i povijesnih tekstova.
+
+### Rezultati
+
+Vizualizacija mreže otkrila je nekoliko ključnih nalaza:
+- **Centralnost legendi:** Legenda o Klečkim vješticama služi kao najjači poveznik (hub) u mreži, povezujući najširi spektar autora (od beletristike do znanstvenih radova).
+- **Interpretacijski zaokret:** Dok su rani autori poput Emila Laszowskog pristupali legendama iz povijesno-znanstvenog kuta, suvremeni autori poput Sabine Gvozdić koriste legendu kao performativni alat za izgradnju turističkog i obrazovnog identiteta.
+- **Identitetski utjecaj "Uspavanog diva":** Pokazalo se da vizualni identitet grada, dominiran planinom Klek, izravno korelira s književnim motivima Regoča, stvarajući "geološki identitet" koji stanovnici internaliziraju kao dio svoje svakodnevice.
+
+### Rasprava: Legende kao modifikatori identiteta
+
+Analiza sugerira da legende nisu statični ostaci prošlosti, već dinamični procesi. Legenda o Đulinom ponoru, primjerice, redefinirala je tragični romantizam lokalnog kraja, dok je Frankopanska baština osigurala povijesni legitimitet.
+Povezanost pisaca očituje se u preuzimanju i transformaciji motiva; Ivana Brlić-Mažuranić uzela je fragmente narodne predaje i kodificirala ih u univerzalni jezik bajke, čime je Ogulin prestao biti lokalni fenomen i postao dio svjetske kulturne baštine. To je ključna promjena identiteta – od izoliranog planinskog naselja do globalno prepoznate destinacije mašte.
+
+### Zaključak
+
+Mreža ogulinskih autora pokazuje da je identitet grada "živi organizam" koji se napaja iz bunara legendi. Razlike između autora u pristupu – od čisto dokumentacijskog do umjetničko-interpretativnog – ne slabe mrežu, već joj daju dubinu i detaljnost. Ovakav prikaz omogućuje stanovnicima i istraživačima da vide sebe kao dio dugog lanca pripovjedača koji, kroz pero i riječ, nastavljaju graditi identitet Ogulina kao mjesta gdje bajka susreće zbilju.
 
 ---
 
-## Discussion
+### Reference
 
-The "Mreža Ogulina" app demonstrates that cultural identity is better understood as a *relation* rather than a collection of static facts. By mapping the "Identity Impact" of legends (e.g., how the Frankopan heritage provides historical legitimacy), the application moves beyond simple storytelling into the realm of cultural systems analysis. 
-
-Inspired by concepts of "knowledge graphs" (as refined in specialized environments like NotebookLM), the app facilitates a "connected learning" approach. It allows researchers to see not just *who* wrote *what*, but *how* the collective unconscious of a region influences its modern intellectual output.
-
----
-
-## References
-
-1. Brlić-Mažuranić, I. (1916). *Priče iz davnine*.
-2. D3.js Documentation. *Force-Directed Graphs*. 
-3. Ogulin Heritage Center. *Folkloric Archives*.
-4. Google AI Studio Frameworks. (2026). *Digital Humanities Visualization Patterns*.
+*   Brlić-Mažuranić, I. (1916). *Priče iz davnine*. Matica hrvatska.
+    *   Hameršak, M. (2011). *Pričalice: O povijesti djetinjstva i bajke*. Algoritam.
+    *   Laszowski, E. (1923). *Grad Ogulin i njegova povijest*.
+    *   Strohal, R. (1901). *Narodne pripovijetke iz grada Ogulina i okolice*.
+    *   Mreža Ogulina: Interaktivni Arhiv (Digitalni artefakt, 2026).
